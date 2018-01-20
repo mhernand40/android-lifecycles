@@ -39,7 +39,7 @@ class ChronoActivity2 : AppCompatActivity() {
         if (chronometerViewModel.startTime == null) {
             // If the start date is not defined, it's a new ViewModel so set it.
             val startTime = SystemClock.elapsedRealtime()
-            chronometerViewModel.setStartTime(startTime)
+            chronometerViewModel.startTime = startTime
             chronometer.base = startTime
         } else {
             // Otherwise the ViewModel has been retained, set the chronometer's base to the original

@@ -14,26 +14,11 @@
  * limitations under the License.
  */
 
-package com.example.android.lifecycles.step2;
+package com.example.android.lifecycles.step2
 
-import android.support.annotation.Nullable;
-
-import android.arch.lifecycle.ViewModel;
+import android.arch.lifecycle.ViewModel
 
 /**
- * A ViewModel used for the {@link ChronoActivity2}.
+ * A ViewModel used for the [ChronoActivity2].
  */
-public class ChronometerViewModel extends ViewModel {
-
-    @Nullable
-    private Long mStartTime;
-
-    @Nullable
-    public Long getStartTime() {
-        return mStartTime;
-    }
-
-    public void setStartTime(final long startTime) {
-        this.mStartTime = startTime;
-    }
-}
+class ChronometerViewModel(var startTime: Long?) : ViewModel()
