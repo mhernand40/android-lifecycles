@@ -14,22 +14,21 @@
  * limitations under the License.
  */
 
-package com.example.android.lifecycles.step5;
+package com.example.android.lifecycles.step5
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 
-import com.example.android.codelabs.lifecycle.R;
+import com.example.android.codelabs.lifecycle.R
 
 /**
- * Shows two {@link Fragment_step5} fragments.
+ * Shows two [Fragment_step5] fragments.
  */
-public class Activity_step5 extends AppCompatActivity {
+class Activity_step5 : AppCompatActivity() {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_step5);
+        setContentView(R.layout.activity_step5)
     }
 }
