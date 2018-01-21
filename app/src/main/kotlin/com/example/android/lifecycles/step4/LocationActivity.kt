@@ -80,5 +80,4 @@ class LocationActivity : AppCompatActivity() {
 
         override fun onProviderDisabled(provider: String) {}
     }
-
 }

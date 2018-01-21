@@ -25,7 +25,6 @@ import android.widget.TextView
 
 import com.example.android.codelabs.lifecycle.R
 
-
 class ChronoActivity3 : AppCompatActivity() {
 
     private var liveDataTimerViewModel: LiveDataTimerViewModel? = null

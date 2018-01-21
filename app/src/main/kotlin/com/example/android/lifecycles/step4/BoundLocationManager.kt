@@ -23,7 +23,6 @@ import android.location.LocationListener
 import android.location.LocationManager
 import android.util.Log
 
-
 object BoundLocationManager {
     fun bindLocationListenerIn(
             lifecycleOwner: LifecycleOwner,

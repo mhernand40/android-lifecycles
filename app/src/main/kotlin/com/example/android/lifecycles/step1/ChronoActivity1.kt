@@ -22,7 +22,6 @@ import android.widget.Chronometer
 
 import com.example.android.codelabs.lifecycle.R
 
-
 class ChronoActivity1 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

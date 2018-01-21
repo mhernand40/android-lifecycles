@@ -48,6 +48,5 @@ class LiveDataTimerViewModel : ViewModel() {
                 //TODO post the new value with LiveData.postValue()
             }
         }, ONE_SECOND, ONE_SECOND)
-
     }
 }
