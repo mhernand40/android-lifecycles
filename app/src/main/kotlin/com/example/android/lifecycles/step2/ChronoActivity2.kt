@@ -31,7 +31,9 @@ class ChronoActivity2 : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // The ViewModelStore provides a new ViewModel or one previously created.
-        val chronometerViewModel = ViewModelProviders.of(this).get<ChronometerViewModel>(ChronometerViewModel::class.java)
+        val chronometerViewModel =
+                ViewModelProviders.of(this)
+                        .get<ChronometerViewModel>(ChronometerViewModel::class.java)
 
         // Get the chronometer reference
         val chronometer = findViewById<Chronometer>(R.id.chronometer)

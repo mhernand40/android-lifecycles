@@ -40,7 +40,8 @@ class LocationActivity : AppCompatActivity() {
             grantResults: IntArray
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
+        if (grantResults[0] == PackageManager.PERMISSION_GRANTED
+                && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
             bindLocationListener()
         } else {
             Toast.makeText(this, "This sample requires Location access", Toast.LENGTH_LONG).show()
@@ -55,14 +56,21 @@ class LocationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.location_activity)
 
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,
-                        Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        if (!permissionGranted(Manifest.permission.ACCESS_FINE_LOCATION)
+                && !permissionGranted(Manifest.permission.ACCESS_COARSE_LOCATION)) {
             ActivityCompat.requestPermissions(this,
-                    arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION),
+                    arrayOf(
+                            Manifest.permission.ACCESS_FINE_LOCATION,
+                            Manifest.permission.ACCESS_COARSE_LOCATION),
                     REQUEST_LOCATION_PERMISSION_CODE)
         } else {
             bindLocationListener()
         }
+    }
+
+    private fun permissionGranted(permission: String): Boolean {
+        return ActivityCompat.checkSelfPermission(this, permission) ==
+                PackageManager.PERMISSION_GRANTED
     }
 
     private inner class MyLocationListener : LocationListener {
