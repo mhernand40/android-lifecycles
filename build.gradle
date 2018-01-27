@@ -37,6 +37,7 @@ plugins {
 
 ktlint {
     version = "0.15.0"
+    android = true
 }
 
 allprojects {
